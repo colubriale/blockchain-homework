@@ -1,31 +1,81 @@
-# Blockchain Case Study
+# POA Development Chain - zbankcoin2
 
-## The Australian Stock Exchange and the development of its own Blockchain
+## Creation of the zbankcoin2 Blockchain
 
 ## By Joe Colubriale
-![asx-blcochain](Images/ASX_blockchain.jpg)
+
+The first procedure is to setup a folder for this operation. I have called it
+C:\Users\Joe\Desktop\FinTech\Homework\blockchain-homework\POA Development Chain
+
+I then created a folder called Blockchain Tools. I then copied the "Go Ethereum Tools" contents into this folder
+
+## Create Node 1
+I used the following command to create Node 1. Note the password: 1234 and the additional summary info
 
 
-The Australian Stock Exchange (ASX) has set a goal of being the first Stock Exchange in the world to create and use its own Enterprise Blockchain to settle and clear the Australia equity market. Currently, the ASX uses what is called Clearing House Electronic Subregister System (CHESS). The move away from CHESS to blockchain can save tens of millions of dollars.
+![create node 1](Screenshots/create_node1.JPG)
 
-This project began in January 2016, when the ASX teamed up with a blockchain start-up company called Digital Asset Holdings which is based in the US.
-The ASX deals with a large market valued at approximately three trillion Australian dollar (AUD). As such, it can be argued, that value wise, this blockchain is bigger than the Bitcoin blockchain currently valued at 1.5 trillion AUD.
+## Create Node 2
+I used the following command to create Node 2. Note the password: 1234 and the additional summary info
 
-![ceo](Images\dominic_stevens_ASX.jpg)
-The CEO of the ASX, Dominic Stevens, describes the Blockchain technology ie Distribute Ledger as a once in 20 year shift in technology. The aim is to create a system that is both private and “permissioned” which will be available to equity market participants.
 
-To achieve this, they will create their own custom language which is along the lines of the Ethereum Solidity programming language. The ASX blockchain will also create the principles of governance similar to the best of the cryptocurrencies blockchain governances.
-Under the current system of the ASX CHESS market participants deal directly with the ASX. However, under the new CHESS it will allow the market to work under a multi-lateral relationship. All transactions are real time, and the immutable ledger delivers reliable and truthful data. 
+![create node 1](Screenshots/create_node2.JPG)
 
-The ASX blockchain will have smart contracts which will enable the ASX to offer a number of features and utilities. The extraordinary thing about this is that the market can also create and deploy its own contracts for all sorts of future projects.
+Below is the actual execution of the two commands above
 
-The current CHESS system works on a central computer. The use of distributed ledger will add an additional layer of security as it is distributed rather than centralised. Although CHESS is very reliable with an average monthly service availability over the last five years of 99.99%, blockchain should deliver a 100% availability.
+![create node 1](Screenshots/create_node1_2.JPG)
 
-This distributed model has proven to be resistant to hacking based on the use of multiple computers verifying transactions and processing transactions and writing a synchronised copy of the ledger. Also, the blockchain block writing method uses a checksum of previous blocks when writing the current block, this aids in the stopping tampering of previous written blocks. The blockchain also provides transparency.
 
-![ASX](Images/ASX.jpg)
 
-In April 2019, ASX started a Customer Development Environment (CDE) updating software codes every two months. This CDE allows customers access to some of the new business functionality. Customers can also design, build, and test system changes, and access options. 
-The ASX’s aim of being the first conventional stock exchange to implement blockchain technology was, unfortunately, hindered by the Covid 19 pandemic.
+1.	Run the application puppeth.exe from the Blockchain Tools folder.
+To do this from the GitBash terminal you need to execute the following command
+./puppeth.exe
+2. It will ask for a network name. I have chosen the name zbankcoin2
+3. Then select option “2. Configure new genesis”
 
-Now, we have the London Stock Exchange, Japan Exchange Group and NASDAQ also trying to implement blockchain as the fundamental basis of their exchanges. Regardless, this project is probably the biggest crypto project in Australian and will result in a technological leap for the Australia financial space and direct finance gain once its implemented.
+Below are all the options I selected including the use of the addresses of the 2 nodes created above
+
+![create zbankcoin2](Screenshots/create_zbankcoin2.png) 
+
+![create zbankcoin2](Screenshots/create_zbankcoin2-2.png) 
+
+![create zbankcoin2](Screenshots/create_zbankcoin2-3.png)  
+
+I then issued the following command 
+
+./geth --datadir node1 init zbankcoin2.json
+./geth --datadir node2 init zbankcoin2.json
+
+![create json files](Screenshots/create_jsonfiles.png)
+
+### How to start the Zbankcoin2 Blockchain Network
+Firt start Node 1 using the following command. 
+
+./geth --datadir node1 --unlock "e009f5F25d75033D700421830e9576922fa966A3" --mine --rpc --allow-insecure-unlock
+
+Then put in the Password: 1234. To startup the second Node run the command as follows
+
+./geth --datadir node2 --unlock "12CeEEa8e8Afd8986eC7AA2ECC758bc049644Cd0" --mine --port 30304 --bootnodes "enode://99727757dfb2aa43e3a2dbcc73404ddad61a4a123ac035b76281ea31c1ea893ce37d1e78c9d96160e18d673ef868d15b7db2d75437abbbff2fd3cdcc0d7e7165@127.0.0.1:30303" --ipcdisable --allow-insecure-unlock
+
+And then type the password: 1234 even if you are not prompted
+
+Below is what you will see when you run these two commands
+
+![start_blaockchain](Screenshots/start_blockchain.png) 
+
+Open Mycrypto Wallet and create a link to the new zbnkcoin2 network as follows
+
+![setup wallet](Screenshots/setting_up_mycrypto_wallet_zbankcoin2.gif) 
+
+Then select Network
+
+![select network](Screenshots/mycrypto_wallet.png) 
+
+Then select "View and Send" and select address and amount that you want to send zbankcoin2 to 
+
+![send tx](Screenshots/mycrypto_send_receive.JPG) 
+
+Here is an actual transaction on our zbankcoin2 Blockchain network
+
+![final transaction](Screenshots/transaction_on_zbankcoin2_network.png)
+
