@@ -1,0 +1,38 @@
+=============== Nov 24, 2021 (AEDT) ===============
+23:56:10.824393 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+23:56:10.828382 db@open opening
+23:56:10.829380 version@stat F·[] S·0B[] Sc·[]
+23:56:10.831374 db@janitor F·2 G·0
+23:56:10.831374 db@open done T·2.992ms
+23:56:10.845337 db@close closing
+23:56:10.846335 db@close done T·997.8µs
+=============== Nov 25, 2021 (AEDT) ===============
+00:05:32.407234 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+00:05:32.408231 version@stat F·[] S·0B[] Sc·[]
+00:05:32.408231 db@open opening
+00:05:32.408231 journal@recovery F·1
+00:05:32.414216 journal@recovery recovering @1
+00:05:32.419202 memdb@flush created L0@2 N·624 S·50KiB "\x02d\xfc..\x19Ba,v431":"\xfe\x88\xcf..H\xef\xcc,v363"
+00:05:32.426183 version@stat F·[1] S·50KiB[50KiB] Sc·[0.25]
+00:05:32.434162 db@janitor F·3 G·0
+00:05:32.434162 db@open done T·25.9308ms
+=============== Nov 25, 2021 (AEDT) ===============
+00:11:37.542893 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+00:11:37.542893 version@stat F·[1] S·50KiB[50KiB] Sc·[0.25]
+00:11:37.542893 db@open opening
+00:11:37.542893 journal@recovery F·1
+00:11:37.548879 journal@recovery recovering @3
+00:11:37.551882 memdb@flush created L0@5 N·12 S·922B "Dat..ion,v626":"r\x00\x00..\xb7\x18\xf3,v633"
+00:11:37.558850 version@stat F·[2] S·51KiB[51KiB] Sc·[0.50]
+00:11:37.564795 db@janitor F·4 G·0
+00:11:37.564795 db@open done T·21.9022ms
+=============== Nov 25, 2021 (AEDT) ===============
+00:27:09.526880 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+00:27:09.529871 version@stat F·[2] S·51KiB[51KiB] Sc·[0.50]
+00:27:09.529871 db@open opening
+00:27:09.529871 journal@recovery F·1
+00:27:09.547823 journal@recovery recovering @6
+00:27:09.555671 memdb@flush created L0@8 N·334 S·14KiB "H\x04\x05..\x9e\x19&,v804":"r\x00\x00..a\xbb;,v968"
+00:27:09.563650 version@stat F·[3] S·65KiB[65KiB] Sc·[0.75]
+00:27:09.572857 db@janitor F·5 G·0
+00:27:09.573854 db@open done T·43.9832ms
